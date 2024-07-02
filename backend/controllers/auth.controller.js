@@ -110,7 +110,7 @@ export const getMe = async (req, res) => {
     res.status(200).json(user);
     
   } catch (error) {
-    console.log("Error in protectRoute middleware", err.message);
+    console.log("Error in protectRoute middleware", error.message);
 		return res.status(500).json({ error: "Internal Server Error" });
   }
 };
